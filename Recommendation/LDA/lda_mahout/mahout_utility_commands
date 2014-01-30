@@ -1,0 +1,7 @@
+./mahout seqdirectory -i data/docs -o sequenced_docs 
+./mahout seq2sparse -i sequenced_docs -o out/sparseVectors --namedVector -wt tf
+./mahout rowid -i out/sparseVectors/tf-vectors/ -o out/matrix
+./mahout cvb0_local -i out/matrix/matrix -d out/sparseVectors/dictionary.file-0 -a 0.5 -top 4 -do out/cvb/do_out -to out/cvb/to_out
+./mahout vectordump -i out/cvb/to_out --dictionary out/sparseVectors/dictionary.file-0 --dictionaryType sequencefile --vectorSize 10 -sort out/cvb/to_out
+./mahout cvb -i out/sparseVectors/tf-vectors/ -dict out/sparseVectors/dictionary.file-0 -a 0.5 -o mylda_topic_term -dt mylda_doc_topic -k 10
+./mahout seqdumper -i out/sparseVectors/dictionary.file-0 -c

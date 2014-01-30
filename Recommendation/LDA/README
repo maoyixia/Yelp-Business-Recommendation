@@ -1,0 +1,21 @@
+We have used a lot of libraries to develop our project. For the LDA part, they are:
+1. Python2.7 (http://www.python.org/download/releases/2.7/)
+2. NumPy (http://radimrehurek.com/gensim/install.html)
+3. SciPy (http://radimrehurek.com/gensim/install.html)
+4. Gensim (http://radimrehurek.com/gensim/install.html)
+5. MRJob (https://github.com/Yelp/mrjob)
+6. NLTK (http://nltk.org/)
+
+After the installation, you will also need the yelp dataset from:
+http://www.kaggle.com/c/yelp-recruiting/data
+
+Then you will have to use the code in categorize_review to categorize the data.
+
+After that, you should be able to use the code in lda_gensim to run the lda model.
+
+Finally, when the lda model produces the result, you can use the code in visualization to perform the visualization.
+
+I know, this instruction is far away from comprehensive. You will have to figure
+out quite a bit input/output in order to use it. And the environment
+configuration is not funny at all. So if you do want to try out the code but
+can't figure it out, feel free to contact myself (junyang.xin@nyu.edu).
